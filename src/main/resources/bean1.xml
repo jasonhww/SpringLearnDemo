@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="father" class="org.hww.ioc.configmethod.beans.Father"/>
+    <!--以无参构造初始化-->
+    <bean id="person" class="org.hww.ioc.configmethod.beans.Person">
+        <!--有参构造注入属性-->
+        <constructor-arg name="userName" value="luHongKai"/>
+        <!--set方法注入属性-->
+        <property name="age" value="21"/>
+        <!--注入对象类型的属性-->
+        <property name="father" ref="father"/>
+        <!--注入复杂类型的属性-->
+        <property name="arrays">
+            <array>
+                <value>array1</value>
+                <value>array2</value>
+                <value>array3</value>
+            </array>
+        </property>
+        <property name="lists">
+            <list>
+                <value>list1</value>
+                <value>list2</value>
+                <value>list3</value>
+            </list>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="mapKey1" value="mapValue1"/>
+                <entry key="mapKey2" value="mapValue2"/>
+                <entry key="mapKey3" value="mapValue3"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="propKey1" >propValue1</prop>
+                <prop key="propKey2" >propValue2</prop>
+                <prop key="propKey3" >propValue3</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

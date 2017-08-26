@@ -1,0 +1,38 @@
+group 'org.hww'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //compile group: 'org.springframework', name: 'spring', version: '2.5.6'
+    //spring整合Web项目包
+    compile group: 'org.springframework', name: 'spring-web', version: '3.1.1.RELEASE'
+    //spring基础包
+    compile group: 'org.springframework', name: 'spring-beans', version: '3.1.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version: '3.1.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '3.1.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-expression', version: '3.1.1.RELEASE'
+    //spring_aop操作相关包
+    compile group: 'org.springframework', name: 'spring-aop', version: '3.1.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aspects', version: '3.1.1.RELEASE'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.10'
+    //spring_JdbcTemplate和事务
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '3.1.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-tx', version: '3.1.1.RELEASE'
+    compile group: 'cglib', name: 'cglib', version: '3.1'
+    //日志功能包
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    //mysql驱动
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    //数据库连接池
+    compile group: 'com.mchange', name: 'c3p0', version: '0.9.5.2'
+    compile group: 'com.mchange', name: 'mchange-commons-java', version: '0.2.12'
+}
