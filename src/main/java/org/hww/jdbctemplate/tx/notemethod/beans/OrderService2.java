@@ -4,7 +4,7 @@ import org.hww.jdbctemplate.tx.configmethod.beans.OrderDao;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Spring事务管理操作-xml配置方式
+ * Spring事务管理操作-注解方式
  */
 @Transactional
 public class OrderService2 {
